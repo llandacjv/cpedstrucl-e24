@@ -25,6 +25,7 @@ public:
 		cout << "1 - Insert into linked list" << endl;
 		cout << "2 - Pop                    " << endl;
 		cout << "3 - Exit                   " << endl;
+		cout << "4 - Display                  " << endl;
 		
 		cout << "\nChoice: ";
 		cin >> choice;
@@ -45,6 +46,16 @@ public:
                                
         head = n;              
     }
+    
+	int display()
+	{
+    	node = head;
+    	while(node!=NULL)
+    	{
+      	  cout << node->x << " ";
+      	  node = node->next;
+  		}
+  	}
 
     int popValue()
 	{
@@ -58,7 +69,7 @@ public:
     }
 
 private:
-    Node *head; 
+    Node *head, *node; 
 };
 
 int main() 
@@ -81,9 +92,15 @@ int main()
     		break;
     	case 3:
     		exit(1);
-    		break;	
+    		break;
+    	case 4:
+    		cout << endl;
+    		list.display();
+    		getch();
+    		break;
+    		
 	}
-	} while (list.choice <= 3);
+	} while (list.choice <= 4);
 	
     /*list.addValue(5);
     list.addValue(10);

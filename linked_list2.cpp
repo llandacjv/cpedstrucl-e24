@@ -47,10 +47,10 @@ public:
         head = n;              
     }
     
-	int display()
+	int displayValue()
 	{
     	node = head;
-    	while(node!=NULL)
+    	while(node!= NULL)
     	{
       	  cout << node->x << " ";
       	  node = node->next;
@@ -95,7 +95,7 @@ int main()
     		break;
     	case 4:
     		cout << endl;
-    		list.display();
+    		list.displayValue();
     		getch();
     		break;
     		

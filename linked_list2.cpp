@@ -94,21 +94,13 @@ int main()
     		exit(1);
     		break;
     	case 4:
+    		system("cls");
+    		cout << "Linked list:" << endl;
     		cout << endl;
     		list.displayValue();
     		getch();
-    		break;
-    		
+    		break;	
 	}
 	} while (list.choice <= 4);
-	
-    /*list.addValue(5);
-    list.addValue(10);
-    list.addValue(20);*/
-
-    /*cout << list.popValue() << endl;
-    cout << list.popValue() << endl;
-    cout << list.popValue() << endl;*/
-    
     return 0;
 }

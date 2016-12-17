@@ -75,9 +75,8 @@ int main()
     		list.addValue(list.ins);
     		break;
     	case 2:
-    		list.popValue(); 
-			cout << endl;
-    		cout << "Value popped!" << endl;
+    		cout << list.popValue();
+    		cout << " ----Value popped!" << endl;
     		getch();
     		break;
     	case 3:

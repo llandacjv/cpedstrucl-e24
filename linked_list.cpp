@@ -97,11 +97,30 @@ int ddelete(int num) {
   return 0;
 }
 
-/*void deleteall() {
-  struct node *temp
-  
-  
-}*/
+void deleteall(int num) {
+  struct node * temp, * prev;
+  temp = head;
+  while (temp != NULL) {
+    if (temp -> data == num) {
+      if (temp == head) {
+        head = temp -> next;
+        free(temp);
+      temp = prev ->next;
+      
+      } else {
+        prev -> next = temp -> next;
+        free(temp);
+        temp = prev ->next;
+      
+      }
+    } else {
+      prev = temp;
+      temp = temp -> next;
+    }
+  }
+
+}
+
 
 void insert(int num) {
   int c = 0;
@@ -220,7 +239,7 @@ int main() {
         break;
       case 7:
         if (head == NULL)
-        printf("List is Empty\n");
+          printf("List is Empty\n");
         else {
           printf("Enter the number to delete : ");
           scanf("%d", & num);
@@ -231,8 +250,12 @@ int main() {
         }
         system("pause>0");
         break;
-      //case 8:
-      	
+      case 8:
+      	printf("Number to delete? \n");
+    	scanf("%d" , &num);
+    	deleteall(num);
+        system("pause>0");
+        break;
       case 9:
         exit (0);
       default:

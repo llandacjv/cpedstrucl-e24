@@ -251,7 +251,7 @@ int main() {
         system("pause>0");
         break;
       case 8:
-      	printf("Number to delete? \n");
+      	printf("Number to delete: ");
     	scanf("%d" , &num);
     	deleteall(num);
         system("pause>0");

@@ -75,6 +75,7 @@ private:
 
 int main() 
 {
+	int flag;
     LinkedList list;
     do
     {
@@ -85,17 +86,31 @@ int main()
     	case 1:
     		list.insertLinkedList();
     		list.addValue(list.ins);
+    		flag = 1;
     		break;
     	case 2:
-    		cout << list.popValue();
-    		cout << " ----Value popped!" << endl;
-    		getch();
-    		break;
+    	if(flag>0)
+		{
+			cout << list.popValue();
+			cout << " ---Value popped!"<<endl;
+		}
+		else
+		{
+			cout<<"List is empty!"<<endl;
+		}
+		getch();
+		break;
     	case 3:
     		system("cls");
+    		if(flag>0)
+			{
     		cout << "Linked list:" << endl;
-    		cout << endl;
     		list.displayValue();
+    		}
+    		else
+    		{
+    			cout<<"List is empty!"<<endl;
+			}
     		getch();
     		break;
     	case 4:

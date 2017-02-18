@@ -4,7 +4,7 @@ using namespace std;
 int main() 
 {	
 	int arr[] = {8,10,6,4,2};
-	int n=5, swap;
+	int n=5;
  
 	for(int i=0;i<n;i++) 
 	{

@@ -4,7 +4,7 @@ using namespace std;
 int main() 
 {	
 	int arr[] = {35,10,55,20,5};
-	int n=5, swap;
+	int n=5, p, swap;
  
 	for(int i=n;i>1;i--) 
 	{
@@ -17,7 +17,8 @@ int main()
        			arr[j+1] = swap;
     		}
     	}
-    	
+    	p++;
+    	cout<<"Pass: "<<p<<": ";
     	for(int k=0;k<n;k++)
 		cout<<arr[k]<<" ";
 		cout<<endl;
